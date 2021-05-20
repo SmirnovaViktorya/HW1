@@ -3,8 +3,8 @@ function getRandomNumber() {
 }
 
 function areNumbersEqual(userNum, randomNum) {
-    userNum = userNum();
-    randomNum = randomNum();
+    let userNum = userNum();
+    let randomNum = randomNum();
     if (userNum == randomNum) {
         alert(`Угадал !!! Число ${userNum}!`)
     } else {

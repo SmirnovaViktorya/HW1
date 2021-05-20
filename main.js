@@ -4,17 +4,9 @@ function getNumber() {
     return prompt("Введи число");
 }
 
-function isANumber(num) {
-    if (!isNaN(num)) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
 function inputNumber() {
-    num = getNumber();
-    while (!isANumber(num)) {
+    let num = getNumber();
+    while (!isNaN(num)) {
         num = getNumber();
     }
     return num;
@@ -32,7 +24,7 @@ function calcIterations(num) {
 //******************* TASK 2 **********************
 
 function getUserNumber() {
-    num = prompt("Введи число от 1 до 10");
+    let num = prompt("Введи число от 1 до 10");
     return num;
 }
 
@@ -47,7 +39,7 @@ function checkUserNumber(num) {
 }
 
 function numberInput() {
-    num = getUserNumber();
+    let num = getUserNumber();
     while (!checkUserNumber(num)) {
         num = getUserNumber();
     }
@@ -57,12 +49,12 @@ function numberInput() {
 //******************* TASK 3 **********************
 
 function getStr() {
-    str = prompt("Введи строку");
+    let str = prompt("Введи строку");
     return str;
 }
 
 function getArrayOfWords(str) {
-    var words = str.split(" ");
+    let words = str.split(" ");
     return words;
 }
 
@@ -72,8 +64,8 @@ function upperCaseFirstLetter(word) {
 }
 
 function getNewStr(words) {
-    newWords = [];
-    for (i = 0; i <= words.length; i++) {
+    let newWords = [];
+    for (let i = 0; i <= words.length; i++) {
         newWords.push(upperCaseFirstLetter(words[i]));
     }
     return newWords.join(" ");
@@ -101,7 +93,7 @@ function sumDigitOfNumber(num = 2021) {
     if (isNaN(sum) || !Number.isInteger(sum)) {
         alert("Введено не число или не целое число")
     } else {
-        return alert(`Сумма цифр введенного числа ${sum}`);
+        alert(`Сумма цифр введенного числа ${sum}`);
     }
 }
 
@@ -114,13 +106,13 @@ function transformToKebabCase(str) {
 //******************* TASK 7 **********************
 
 function getArrayOfWords(str) {
-    var words = str.split(" ");
+    let words = str.split(" ");
     return words;
 }
 
 function createAbbrev(words) {
-    abb = [];
-    for (i = 0; i < words.length; i++) {
+    let abb = [];
+    for (let i = 0; i < words.length; i++) {
         abb.push(words[i][0]);
     }
     return abb.join("").toUpperCase();
